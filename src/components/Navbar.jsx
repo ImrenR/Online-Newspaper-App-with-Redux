@@ -1,13 +1,12 @@
 import React from "react";
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
-
-
+import { useDispatch, useSelector } from "react-redux";
+import { deleteUser } from "../features/yetkiSlice";
 
 const Navbar = () => {
+  const { email } = useSelector((state) => state.yetkiSlice);
 
-
-
-
+  const dispatch = useDispatch();
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -17,13 +16,13 @@ const Navbar = () => {
             Online News
           </Typography>
 
-         
-            <Button  color="inherit">
+          {email ? (
+            <Button color="inherit" onClick={()=>dispatch(deleteUser())}>
               LOGOUT
             </Button>
-        
+          ) : (
             <Button color="inherit">Sign Up</Button>
-         
+          )}
         </Toolbar>
       </AppBar>
     </Box>

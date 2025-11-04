@@ -11,8 +11,13 @@ const yetkiSlice = createSlice({
      state.email =payload.email,
      state.password =payload.password
     },
+
+    deleteUser: (state)=> {
+      state.email= "",
+      state.password=""
+    }
   },
 });
 
-export const { createUsers } = yetkiSlice.actions;
+export const { createUsers, deleteUser } = yetkiSlice.actions;
 export default yetkiSlice.reducer;
