@@ -8,7 +8,8 @@ const yetkiSlice = createSlice({
   },
   reducers: {
     createUsers: (state, { payload }) => {
-     
+     state.email =payload.email,
+     state.password =payload.password
     },
   },
 });
