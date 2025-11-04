@@ -20,15 +20,14 @@ const haberSlice = createSlice({
   },
 
 
-  
+
   extraReducers: (builder) => {
     builder
-      .addCase(incrementAsync.pending, (state) => {
-        state.status = "loading";
+      .addCase(getirData.pending, (state) => {
+        state.loading = true;
       })
-      .addCase(incrementAsync.fullfilled, (state, action) => {
-        state.status = "idle";
-        state.value += action.payload;
+      .addCase(getirData.fulfilled, (state, {payload}) => {
+      
       });
   },
 });
