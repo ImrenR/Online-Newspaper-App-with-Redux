@@ -24,7 +24,7 @@ const navigate = useNavigate()
   const handleSubmit = (e)=> {
 e.preventDefault()
 
-dispatch(createUsers(email, password))
+dispatch(createUsers({email, password}))
 
 navigate("/")
 

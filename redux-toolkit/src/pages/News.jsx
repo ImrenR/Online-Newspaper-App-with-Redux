@@ -10,6 +10,9 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import { useEffect } from "react";
+import { getirData } from "../features/haberSlice";
+
 
 
 const News = () => {
@@ -17,6 +20,10 @@ const News = () => {
   
   const {haberler, loading}=useSelector((state)=> state.haberSlice)
 const dispatch= useDispatch()
+
+useEffect(() => {
+    dispatch(getirData());
+  }, []);
   return (
     <>
     {loading ?  (<img src={loadingGif} alt="" height="800px" />)
