@@ -5,7 +5,7 @@ export const getirData = createAsyncThunk("haberSlice/getirData", async () => {
   const res = await axios.get(
     "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=81a4163ea7eb4bccb489151972100adb"
   );
-  return res
+  return res.data.articles;
   
 });
 

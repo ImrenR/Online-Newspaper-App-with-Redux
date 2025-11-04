@@ -20,10 +20,12 @@ const Login = () => {
 
 const dispatch = useDispatch()
 const navigate = useNavigate()
+
   const handleSubmit = (e)=> {
 e.preventDefault()
 
 dispatch(createUsers(email, password))
+
 navigate("/")
 
   }
