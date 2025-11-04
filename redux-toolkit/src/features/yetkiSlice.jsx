@@ -1,9 +1,12 @@
-import React from 'react'
+import { createSlice } from "@reduxjs/toolkit"
 
-const yetkiSlice = () => {
-  return (
-    <div>yetkiSlice</div>
-  )
-}
+
+const yetkiSlice = createSlice({
+    permission : "yetkiSlice",
+    initialState : {
+      email: "",
+      password: "",
+    }
+}) 
 
 export default yetkiSlice
