@@ -8,6 +8,6 @@ import haberSlice from "../features/haberSlice";
 export const store = configureStore({
   reducer: {
     yetkiSlice : yetkiSlice,
-    // haberSlice : haberSlice,
+    haberSlice : haberSlice,
   },
 })
