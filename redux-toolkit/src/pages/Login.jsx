@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { createUsers } from "../features/yetkiSlice";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -18,11 +19,12 @@ const Login = () => {
  let {email,password}= useSelector((state)=> state.yetkiSlice)
 
 const dispatch = useDispatch()
-
+const navigate = useNavigate()
   const handleSubmit = (e)=> {
 e.preventDefault()
 
 dispatch(createUsers(email, password))
+navigate("/")
 
   }
 
