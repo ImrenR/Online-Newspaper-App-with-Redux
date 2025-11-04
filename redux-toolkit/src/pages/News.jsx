@@ -18,10 +18,9 @@ const News = () => {
 console.log(haberler)
   return (
     <>
-    
-        <img src={loadingGif} alt="" height="800px" />
- 
-        <Box
+    {loading ?  (<img src={loadingGif} alt="" height="800px" />)
+   :(
+ <Box
           xs={{ d: "flex" }}
           display="flex"
           alignItems="center"
@@ -30,6 +29,10 @@ console.log(haberler)
         >
           
         </Box>
+   ) }
+        
+ 
+       
   
     </>
   );
