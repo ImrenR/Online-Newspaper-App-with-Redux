@@ -14,7 +14,7 @@ const Navbar = () => {
       <AppBar position="static" color="secondary">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Clarusway News
+            Online News
           </Typography>
 
          

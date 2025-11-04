@@ -2,14 +2,16 @@ import { createSlice } from "@reduxjs/toolkit"
 
 
 const yetkiSlice = createSlice({
-    permission : "yetkiSlice",
+    name : "yetkiSlice",
     initialState : {
       email: "",
       password: "",
 
       reducers : {
        
-        createUsers : ()=> {}
+        createUsers : (state, {payload})=> {
+          console.log(state, payload)
+        }
 
       }
     }

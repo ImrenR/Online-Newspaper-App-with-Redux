@@ -1,4 +1,4 @@
-import React from "react";
+
 import {
   Avatar,
   Box,
@@ -8,19 +8,30 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { createUsers } from "../features/yetkiSlice";
 
 
 
 const Login = () => {
- 
-  
+
+ let {email,password}= useSelector((state)=> state.yetkiSlice)
+
+const dispatch = useDispatch()
+
+  const handleSubmit = (e)=> {
+e.preventDefault()
+
+dispatch(createUsers(email, password))
+
+  }
 
 
 
 
   return (
     <Container component="main" maxWidth="xs">
-      <Box
+      <Box onSubmit={handleSubmit}
 
         sx={{
           marginTop: 8,
@@ -50,7 +61,7 @@ const Login = () => {
             name="email"
             autoComplete="email"
             autoFocus
-
+             onChange={(e)=>(email=e.target.value)}
           />
           <TextField
             margin="normal"
@@ -60,6 +71,7 @@ const Login = () => {
             label="Password"
             type="password"
             id="password"
+            onChange={(e)=>(password=e.target.value)}
           />
 
           <Button
