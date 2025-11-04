@@ -3,14 +3,14 @@ import axios from "axios";
 
 export const getirData = createAsyncThunk("haberSlice/getirData", async () => {
   const res = await axios.get(
-    "https:/newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=81a4163ea7eb4bccb489151972100adb"
+    "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=81a4163ea7eb4bccb489151972100adb"
   );
   return res
   
 });
 
 const haberSlice = createSlice({
-  name: haberSlice,
+  name: "haberSlice",
   initialState: {
     haberler: [],
     loading: true,
@@ -27,9 +27,12 @@ const haberSlice = createSlice({
         state.loading = true;
       })
       .addCase(getirData.fulfilled, (state, {payload}) => {
-      
+      state.haberler = payload
+      state.loading = false
       });
   },
 });
 
-export default haberSlice;
+export const {clear} = haberSlice.actions
+
+export default haberSlice.reducer;

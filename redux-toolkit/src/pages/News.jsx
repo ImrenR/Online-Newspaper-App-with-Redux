@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import loadingGif from "../assets/loading.gif";
 
 import {
@@ -13,7 +14,8 @@ import {
 
 const News = () => {
   
-
+  const {haberler, loading}=useSelector((state)=> state.haberSlice)
+console.log(haberler)
   return (
     <>
     
