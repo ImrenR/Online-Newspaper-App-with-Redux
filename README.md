@@ -4,7 +4,7 @@
 https://github.com/user-attachments/assets/8d4e1ce3-f9f3-4b4c-be9d-fd20f9227dc0
 
 
-email : "Imren"
+email : "imren"
 password :1234
 
 
