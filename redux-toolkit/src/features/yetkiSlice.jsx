@@ -6,7 +6,14 @@ const yetkiSlice = createSlice({
     initialState : {
       email: "",
       password: "",
+
+      reducers : {
+       
+        createUsers : ()=> {}
+
+      }
     }
 }) 
 
-export default yetkiSlice
+export const {createUsers}= yetkiSlice.actions;
+export default yetkiSlice.reducer
