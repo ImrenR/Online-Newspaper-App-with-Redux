@@ -6,3 +6,7 @@ npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
 
 # Next.js using the `with-redux` template
 npx create-next-app --example with-redux my-app
+
+
+email : "Imren"
+password :1234
