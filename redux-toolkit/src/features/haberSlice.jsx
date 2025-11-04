@@ -16,7 +16,9 @@ const haberSlice = createSlice({
     loading: true,
   },
   reducers: {
-    clear: () => {},
+    clear: (state,{payload}) => {
+      state.haberler= state.haberler.filter((a)=> a.url !== payload)
+    },
   },
 
 
