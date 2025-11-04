@@ -7,7 +7,7 @@ import haberSlice from "../features/haberSlice";
 
 export const store = configureStore({
   reducer: {
-    permission : yetkiSlice,
-    news : haberSlice,
+    yetkiSlice : yetkiSlice,
+    // haberSlice : haberSlice,
   },
 })
